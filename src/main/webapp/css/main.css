@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+/* 
+Google Fonts 
+.cutive-mono-regular {
+	font-family: "Cutive Mono", monospace;
+	font-weight: 400;
+}
+
+.anta-regular {
+  font-family: "Anta", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Cutive Mono", monospace;
+	font-style: normal;
+	/*
+	font-family: "Anta", sans-serif;
+	overflow-x: hidden;
+	position: relative;
+	background-size: cover;
+	*/
+	background: linear-gradient(-45deg, #000000a9, #000000a9), url("../img/popcorn.jpg");
+	background-attachment: fixed;
+    background-position: top;
+    background-repeat: repeat;
+	transition: all 0.4s ease-in-out;
+	color: white;
+	min-width: 320px;
+ 	min-height: 100vh;
+}
+
+input, textarea {
+	color: #000000 !important;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+
+#add-popup {
+	/* 
+	display: none; 
+	z-index: -10;
+	*/
+	transform: scale3d(0.98,0.98,0.98); 
+	transition: transform 0.2s ease-in-out !important;
+	align-items: center; 
+	visibility: hidden;
+	justify-content: center;
+}
+
+#add-popup.active {
+	/*z-index: 50;*/
+	display: flex;
+	transform: scale3d(1,1,1);
+	transition: transform 0.2s ease-in-out !important;
+	visibility: visible;
+}
+
+.add-popup-body {
+	background: linear-gradient(-45deg, #00000081, #00000081), url("../img/film-projector.png");
+	background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+#pagination {
+  margin: 0;
+  padding: 0;
+  text-align: center
+}
+
+#pagination li {
+  display: inline
+}
+
+#pagination li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px 10px;
+  color: #000;
+  
+  border-radius: 5px;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+#pagination li a.active {
+  background-color: #76b8d1;
+  color: #ffffff
+}
+
+#pagination li a:hover:not(.active) {
+  background-color: #ddd;
+} 
+
